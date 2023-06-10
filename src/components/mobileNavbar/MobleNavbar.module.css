@@ -20,12 +20,12 @@
     width: 100%;
     background-color: var(--white);
   }
-
+  /*menu before open has to be out of the viewport to prevent being clicked*/
   .menu {
     display: block;
     position: fixed;
     top: 80px;
-    left: 0;
+    left: -110%;
     width: 100%;
     height: 100vh;
     opacity: 0;

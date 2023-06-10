@@ -13,7 +13,6 @@ export default function Home({ homeRef }) {
       </div>
 
       <div className={styles.textContent}>
-        <a href="https://www.google.es/">google</a>
         <h1>Alimentación inteligente para una vida en equilibrio.</h1>
         <p>
           Mi PROPOSITO #1, es poder ayudarte a desarrollar un pensamiento

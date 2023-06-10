@@ -5,7 +5,7 @@ export default function Navbar({ position, homeRef, sobremiRef, articulosRef,con
   //scroll to elemtnt div position
   const scrollToElement = (event) => {
     const clickedElement = event.target.id
-    console.log(clickedElement);
+
     if(clickedElement === "home"){
       homeRef.current.scrollIntoView({ behavior: 'smooth' });
     } else if(clickedElement === "sombremi"){
