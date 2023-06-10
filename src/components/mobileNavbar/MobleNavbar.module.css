@@ -74,6 +74,7 @@
     color: var(--main-grey);
     font-size: 1.5rem;
     font-weight: 200;
+    cursor: pointer;
   }
 
   .linkActive {
