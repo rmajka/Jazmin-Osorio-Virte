@@ -3,22 +3,28 @@ import { useState } from "react";
 import SocialMediaBox from "../socialmediabox/SocialMediaBox";
 import Hamburger from "../hamburger/Hamburger";
 
-export default function MobleNavbar({ position, homeRef, sobremiRef, articulosRef,contactoRef }) {
+export default function MobleNavbar({
+  position,
+  homeRef,
+  sobremiRef,
+  articulosRef,
+  contactoRef,
+}) {
   const [open, setOpen] = useState(false);
 
-    //scroll to elemtnt div position
+  //scroll to elemtnt div position
   const scrollToElement = (event) => {
-    const clickedElement = event.target.id
+    const clickedElement = event.target.id;
     //close menu
-    setOpen(false)
-    if(clickedElement === "home"){
-      homeRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if(clickedElement === "sombremi"){
-      sobremiRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if(clickedElement === "articulos"){
-      articulosRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if(clickedElement === "contacto"){
-      contactoRef.current.scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
+    if (clickedElement === "home") {
+      homeRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (clickedElement === "sombremi") {
+      sobremiRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (clickedElement === "articulos") {
+      articulosRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (clickedElement === "contacto") {
+      contactoRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -31,15 +37,13 @@ export default function MobleNavbar({ position, homeRef, sobremiRef, articulosRe
       <div className={open ? styles.menuOpen : styles.menu}>
         <ul className={styles.listContainer}>
           <li>
-            
             <a
-            id="home"
+              id="home"
               className={
                 position < 81 && position >= -420
                   ? styles.linkActive
                   : styles.link
               }
-            
               onClick={scrollToElement}
             >
               Home
@@ -47,27 +51,25 @@ export default function MobleNavbar({ position, homeRef, sobremiRef, articulosRe
           </li>
           <li>
             <a
-            id="sombremi"
+              id="sombremi"
               className={
                 position < -420 && position >= -1750
                   ? styles.linkActive
                   : styles.link
               }
-             
-             onClick={scrollToElement}
+              onClick={scrollToElement}
             >
               Sobre mí
             </a>
           </li>
           <li>
             <a
-            id="articulos"
+              id="articulos"
               className={
                 position < -1750 && position >= -3000
                   ? styles.linkActive
                   : styles.link
               }
-            
               onClick={scrollToElement}
             >
               Mis artículos
@@ -75,9 +77,18 @@ export default function MobleNavbar({ position, homeRef, sobremiRef, articulosRe
           </li>
           <li>
             <a
-            id="contacto"
+              className={styles.link}
+              onClick={() => setOpen(false)}
+              href="https://sites.google.com/d/1851QWsjeOHTy53GiirwP6QIivY3RzuIn/p/1ojM7mRFVjT9ycvWIjxB0BnYm4v5akI7d/edit"
+            >
+              Productos
+            </a>
+          </li>
+          <li>
+            <a
+              id="contacto"
               className={position < -3000 ? styles.linkActive : styles.link}
-               onClick={scrollToElement}
+              onClick={scrollToElement}
             >
               Contacto
             </a>

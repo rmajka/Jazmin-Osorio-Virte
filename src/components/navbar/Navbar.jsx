@@ -1,22 +1,27 @@
 import styles from "./Navbar.module.css";
 import SocialMediaBox from "../socialmediabox/SocialMediaBox";
 
-export default function Navbar({ position, homeRef, sobremiRef, articulosRef,contactoRef }) {
+export default function Navbar({
+  position,
+  homeRef,
+  sobremiRef,
+  articulosRef,
+  contactoRef,
+}) {
   //scroll to elemtnt div position
   const scrollToElement = (event) => {
-    const clickedElement = event.target.id
+    const clickedElement = event.target.id;
 
-    if(clickedElement === "home"){
-      homeRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if(clickedElement === "sombremi"){
-      sobremiRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if(clickedElement === "articulos"){
-      articulosRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if(clickedElement === "contacto"){
-      contactoRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (clickedElement === "home") {
+      homeRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (clickedElement === "sombremi") {
+      sobremiRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (clickedElement === "articulos") {
+      articulosRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (clickedElement === "contacto") {
+      contactoRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   return (
     <nav className={styles.navContainer}>
@@ -24,20 +29,19 @@ export default function Navbar({ position, homeRef, sobremiRef, articulosRef,con
         <h4 className={styles.name}>Jazmin Osorio</h4>
         <ul className={styles.listContainer}>
           <li>
-         
             <a
-            id="home"
+              id="home"
               className={
                 position < 81 && position >= -400 ? styles.active : styles.link
               }
-               onClick={scrollToElement}
+              onClick={scrollToElement}
             >
               Home
             </a>
           </li>
           <li>
-            <a 
-            id="sombremi"
+            <a
+              id="sombremi"
               className={
                 position < -400 && position >= -950
                   ? styles.active
@@ -50,15 +54,24 @@ export default function Navbar({ position, homeRef, sobremiRef, articulosRef,con
           </li>
           <li>
             <a
-            id="articulos"
+              id="articulos"
               className={
                 position < -950 && position >= -1370
                   ? styles.active
                   : styles.link
               }
-               onClick={scrollToElement}
+              onClick={scrollToElement}
             >
               Mis artículos
+            </a>
+          </li>
+          <li>
+            <a
+              id="articulos"
+              className={styles.link}
+              href="https://sites.google.com/d/1851QWsjeOHTy53GiirwP6QIivY3RzuIn/p/1ojM7mRFVjT9ycvWIjxB0BnYm4v5akI7d/edit"
+            >
+              Productos
             </a>
           </li>
         </ul>
@@ -66,7 +79,7 @@ export default function Navbar({ position, homeRef, sobremiRef, articulosRef,con
       <div className={styles.rightSide}>
         <SocialMediaBox />
         <a
-        id="contacto"
+          id="contacto"
           className={position < -1370 ? styles.activeBtn : styles.contactoBtn}
           onClick={scrollToElement}
         >
