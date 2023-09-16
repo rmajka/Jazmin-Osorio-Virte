@@ -2,14 +2,14 @@ import styles from "./SocialMediaBox.module.css";
 import fb from "../../assets/logos/facebook.svg";
 import insta from "../../assets/logos/insta.svg";
 import linkedin from "../../assets/logos/linkedin.svg";
-import yt from "../../assets/logos/youtube.svg"
+import yt from "../../assets/logos/youtube.svg";
 
 export default function SocialMediaBox() {
   return (
     <div className={styles.boxContainer}>
       <a
         className={styles.ytLink}
-        href="https://youtube.com/@DraJazminOsorio"
+        href="https://www.youtube.com/@misvitaminas"
         target="_blank"
         rel="noreferrer"
       >
@@ -17,7 +17,7 @@ export default function SocialMediaBox() {
       </a>
       <a
         className={styles.fbLink}
-        href="https://m.facebook.com/jazmin.osorio.908"
+        href="https://www.facebook.com/profile.php?id=61551209313745"
         target="_blank"
         rel="noreferrer"
       >
@@ -25,7 +25,7 @@ export default function SocialMediaBox() {
       </a>
       <a
         className={styles.instaLink}
-        href="https://www.instagram.com/jazmin_osmo/"
+        href="https://www.instagram.com/mis.vitaminas1/"
         target="_blank"
         rel="noreferrer"
       >
